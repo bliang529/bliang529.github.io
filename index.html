@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Brian Liang</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121843315-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121843315-1');
+    </script>
+    <script>
+        function flip() {
+            var cbox = document.getElementsByClassName('cbox')[0];
+            console.log(cbox);
+            //myLayer.style.backgroundColor = "#bff0a1";
+            if (cbox.checked === true) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                lazyDarkFlip()
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                lazyLightFlip()
+            }
+        }
+
+        function lazyDarkFlip() {
+            console.log(document.getElementById('linkedin'));
+            console.log(document.getElementById('linkedin').src);
+            document.getElementById('linkedin').src = "assets/icons/linkedinLight.svg";
+            document.getElementById('github').src = "assets/icons/githubLight.svg";
+            document.getElementById('resume').src = "assets/icons/documentLight.svg";
+            document.getElementById('email').src = "assets/icons/mailLight.svg";
+            document.getElementsByClassName('moon')[0].classList.add('swing')
+        }
+        function lazyLightFlip() {
+            document.getElementById('linkedin').src = "assets/icons/linkedin.svg";
+            document.getElementById('github').src = "assets/icons/github.svg";
+            document.getElementById('resume').src = "assets/icons/document.svg";
+            document.getElementById('email').src = "assets/icons/mail.svg";
+            document.getElementsByClassName('moon')[0].classList.remove('swing')
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+
+</head>
+
+<body class="bg">
+    <div class="grid-container">
+        <div class="animated moon">  
+            <img class="weather-icon" src="assets/icons/moon.svg">
+        </div>  
+        <div class="animated header fadeIn">
+            <div class="animated infinite pulse">
+                <h1 class="central-info">Brian Liang</h1>
+            </div>
+            <h4>Northwestern University</h4>
+        </div>
+        <div class="l1 animated fadeInLeft">
+            <a class="hvr-grow" target="_blank" href="https://www.linkedin.com/in/brian-liang/">
+                <img id="linkedin" class="circle-icon" src="assets/icons/linkedin.svg" alt="linkedin">
+            </a>
+        </div>
+        <div class="l2 animated fadeInLeft second">
+            <a class="hvr-grow" target="_blank" href="https://github.com/bliang529">
+                <img id="github" class="circle-icon" src="assets/icons/github.svg" alt="github">
+            </a>
+        </div>
+        <div class="l3 animated fadeInRight">
+            <a class="hvr-grow" target="_blank" href="assets/Resume.pdf">
+                <img id="resume" class="circle-icon" src="assets/icons/document.svg" alt="resume">
+            </a>
+        </div>
+        <div class="l4 animated fadeInRight second">
+            <a class="hvr-grow" href="mailto:BrianLiang@u.northwestern.edu">
+                <img id="email" class="circle-icon" src="assets/icons/mail.svg" alt="email">
+            </a>
+        </div>
+        <div class="animated fadeIn switch">
+            <input class="cbox" type="checkbox" value="checkbox" onchange="flip()">​
+        </div>
+    </div>
+</body>
+
+</html>
