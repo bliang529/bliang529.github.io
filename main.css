@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
-
-html,
-body {
+html, body {
   font-family: "Quicksand", sans-serif;
   height: 100%;
   overflow: hidden;
   color: black;
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .circle-icon {
@@ -24,12 +22,13 @@ body {
   height: 40px;
 }
 
-.fadeInLeft.second {
-  animation-delay: 0.1s;
+.weather-icon-small {
+  width: 27px;
+  height: 27px;
 }
 
-.fadeInRight {
-  animation-delay: 0.2s;
+.fadeInLeft.second {
+  animation-delay: 0.3s;
 }
 
 .fadeInRight.second {
@@ -59,26 +58,52 @@ body {
   animation-duration: 5s;
 }
 
+.sun {
+  grid-area: sun;
+  justify-self: left;
+  margin-left: 100px;
+}
+
+.sunRotate {
+  -webkit-animation: rotation 8s infinite linear;
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+
 .moon {
   grid-area: moon;
   justify-self: right;
-  margin-right: 50px;
+  margin-right: 100px;
 }
+
 .header {
   grid-area: header;
 }
+
 .l1 {
   grid-area: one;
 }
+
 .l2 {
   grid-area: two;
 }
+
 .l3 {
   grid-area: three;
 }
+
 .l4 {
   grid-area: four;
 }
+
 .switch {
   grid-area: footer;
   align-self: start;
@@ -92,37 +117,35 @@ body {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  grid-template-areas:
-    ".      .      .      .      .  moon"
-    ". header header header header  .   "
-    ". one    two    three  four    .   "
-    ". .      footer footer .       .   ";
+  grid-template-areas: "sun        .      .      .       .  moon" ".   header header header header  .      " ".   one    two    three  four    .      " ".   .      footer footer .       .      ";
   grid-template-rows: 200px 50px 200px 200px;
   grid-template-columns: 35% 75px 75px 75px 75px 35%;
 }
 
 @media only screen and (max-width: 650px) {
-    .moon {
-        grid-area: moon;
-        align-self: start;
-        margin-right: 40px;
-        margin-top: 50px;
-      }
-    .grid-container {
-        height: 100%;
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
-        grid-template-areas:
-          ".      .      .      .      .  moon"
-          ". header header header header  .   "
-          ". one    two    three  four    .   "
-          ". .      footer footer .       .   ";
-        grid-template-rows: 200px 50px 200px 200px;
-        grid-template-columns: 50px 75px 75px 75px 75px 50px;
-      }
+  .sun {
+    grid-area: sun;
+    align-self: start;
+    margin-left: 40px;
+    margin-top: 65px;
+  }
+  .moon {
+    grid-area: moon;
+    align-self: start;
+    margin-right: 40px;
+    margin-top: 65px;
+  }
+  .grid-container {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "sun      .      .      .      .  moon" ". header header header header  .   " ". one    two    three  four    .   " ". .      footer footer .       .   ";
+    grid-template-rows: 200px 50px 200px 200px;
+    grid-template-columns: 50px 75px 75px 75px 75px 50px;
+  }
 }
 
 .hvr-grow {
@@ -136,9 +159,8 @@ body {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -160,12 +182,10 @@ body {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -177,12 +197,10 @@ body {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -199,7 +217,6 @@ body {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -209,7 +226,6 @@ body {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -226,7 +242,6 @@ body {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -240,7 +255,6 @@ body {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -259,7 +273,6 @@ body {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -273,7 +286,6 @@ body {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -286,95 +298,121 @@ body {
   animation-name: fadeInRight;
 }
 
-@-webkit-keyframes swing {
-    20% {
-      -webkit-transform: rotate3d(0, 0, 1, 0deg);
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    40% {
-      -webkit-transform: rotate3d(0, 0, 1, -15deg);
-      transform: rotate3d(0, 0, 1, -15deg);
-    }
-  
-    60% {
-      -webkit-transform: rotate3d(0, 0, 1, -10deg);
-      transform: rotate3d(0, 0, 1, -10deg);
-    }
-  
-    80% {
-      -webkit-transform: rotate3d(0, 0, 1, -12deg);
-      transform: rotate3d(0, 0, 1, -12deg);
-    }
-  
-    to {
-      -webkit-transform: rotate3d(0, 0, 1, -12.5deg);
-      transform: rotate3d(0, 0, 1, -12.5deg);
-    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
-  
-  @keyframes swing {
-    20% {
-      -webkit-transform: rotate3d(0, 0, 1, 0deg);
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    40% {
-      -webkit-transform: rotate3d(0, 0, 1, -15deg);
-      transform: rotate3d(0, 0, 1, -15deg);
-    }
-  
-    60% {
-      -webkit-transform: rotate3d(0, 0, 1, -10deg);
-      transform: rotate3d(0, 0, 1, -10deg);
-    }
-  
-    80% {
-      -webkit-transform: rotate3d(0, 0, 1, -12deg);
-      transform: rotate3d(0, 0, 1, -12deg);
-    }
-  
-    to {
-      -webkit-transform: rotate3d(0, 0, 1, -12.5deg);
-      transform: rotate3d(0, 0, 1, -12.5deg);
-    }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-  
-  .swing {
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
-    -webkit-animation-name: swing;
-    animation-name: swing;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -15deg);
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -12deg);
+    transform: rotate3d(0, 0, 1, -12deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -12.5deg);
+    transform: rotate3d(0, 0, 1, -12.5deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -15deg);
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -12deg);
+    transform: rotate3d(0, 0, 1, -12deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -12.5deg);
+    transform: rotate3d(0, 0, 1, -12.5deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
 input[type="checkbox"] {
-  background-image: -webkit-linear-gradient(
-    left,
-    #f2c407 50%,
-    rgb(181, 102, 255) 50%
-  );
+  background-image: -webkit-linear-gradient( 0deg, #4285f4, rgb(181, 102, 255));
   background-size: 100% 100%, 200% 100%;
   cursor: pointer;
   width: 65px;
   -webkit-appearance: none;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  animation: hue 120s infinite linear;
+  animation-duration: 5s;
 }
+
 input[type="checkbox"]:after {
   background-color: #fff;
   content: "";
   display: block;
   height: 16px;
-  width: 40px;
-}
-input[type="checkbox"]:checked {
-  background-position: 0 0, 35px 0;
-  padding-left: 21px;
+  width: 46px;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
+input[type="checkbox"]:checked {
+  background-position: 0 0, 35px 0;
+  padding-left: 15px;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
 }

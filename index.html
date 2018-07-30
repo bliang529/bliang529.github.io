@@ -40,6 +40,9 @@
             document.getElementById('resume').src = "assets/icons/documentLight.svg";
             document.getElementById('email').src = "assets/icons/mailLight.svg";
             document.getElementsByClassName('moon')[0].classList.add('swing')
+            document.getElementById('smallMoon').classList.remove('swing')
+            document.getElementsByClassName('moon')[0].children[0].classList.add('fadeInDown')
+            document.getElementsByClassName('sun')[0].classList.remove('fadeInUp')
         }
         function lazyLightFlip() {
             document.getElementById('linkedin').src = "assets/icons/linkedin.svg";
@@ -47,6 +50,9 @@
             document.getElementById('resume').src = "assets/icons/document.svg";
             document.getElementById('email').src = "assets/icons/mail.svg";
             document.getElementsByClassName('moon')[0].classList.remove('swing')
+            document.getElementById('smallMoon').classList.add('swing')
+            document.getElementsByClassName('moon')[0].children[0].classList.remove('fadeInDown')
+            document.getElementsByClassName('sun')[0].classList.add('fadeInUp')
         }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,8 +64,11 @@
 
 <body>
     <div class="grid-container">
+        <div class="animated fadeInUp sun">  
+            <img class="sunRotate weather-icon" src="assets/icons/sun.svg">
+        </div>  
         <div class="animated moon">  
-            <img class="weather-icon" src="assets/icons/moon.svg">
+            <img class="animated weather-icon" src="assets/icons/moon.svg">
         </div>  
         <div class="animated header fadeIn">
             <div class="animated infinite pulse">
@@ -67,12 +76,12 @@
             </div>
             <h4>Northwestern University</h4>
         </div>
-        <div class="l1 animated fadeInLeft">
+        <div class="l1 animated fadeInLeft second">
             <a class="hvr-grow" target="_blank" href="https://www.linkedin.com/in/brian-liang/">
                 <img id="linkedin" class="circle-icon" src="assets/icons/linkedin.svg" alt="linkedin">
             </a>
         </div>
-        <div class="l2 animated fadeInLeft second">
+        <div class="l2 animated fadeInLeft">
             <a class="hvr-grow" target="_blank" href="https://github.com/bliang529">
                 <img id="github" class="circle-icon" src="assets/icons/github.svg" alt="github">
             </a>
@@ -88,7 +97,9 @@
             </a>
         </div>
         <div class="animated fadeIn switch">
+            <img class="sunRotate weather-icon-small" src="assets/icons/sunLight.svg">
             <input class="cbox" type="checkbox" value="checkbox" onchange="flip()">​
+            <img id="smallMoon" class="animated swing weather-icon-small" src="assets/icons/moonDark.svg">
         </div>
     </div>
 </body>
