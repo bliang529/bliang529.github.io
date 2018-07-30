@@ -361,10 +361,10 @@ input[type="checkbox"] {
   transition: 0.25s;
 }
 input[type="checkbox"]:after {
-  background-color: #eee;
+  background-color: #fff;
   content: "";
   display: block;
-  height: 20px;
+  height: 16px;
   width: 40px;
 }
 input[type="checkbox"]:checked {
