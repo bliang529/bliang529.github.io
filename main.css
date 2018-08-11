@@ -122,7 +122,10 @@ html, body {
   grid-template-columns: 35% 75px 75px 75px 75px 35%;
 }
 
-@media only screen and (max-width: 650px), (max-height: 600px) {
+@media only screen and (max-width: 650px), (max-height: 800px) {
+  .central-info {
+    margin-bottom: 10px;
+  }
   .sun {
     grid-area: sun;
     align-self: start;
