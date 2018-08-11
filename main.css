@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
 html, body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15pt;
   height: 100%;
   overflow: hidden;
   color: black;
@@ -118,7 +118,7 @@ html, body {
   align-items: center;
   justify-items: center;
   grid-template-areas: "sun        .      .      .       .  moon" ".   header header header header  .      " ".   one    two    three  four    .      " ".   .      footer footer .       .      ";
-  grid-template-rows: 200px 50px 200px 200px;
+  grid-template-rows: 200px 100px 200px 200px;
   grid-template-columns: 35% 75px 75px 75px 75px 35%;
 }
 
@@ -126,13 +126,13 @@ html, body {
   .sun {
     grid-area: sun;
     align-self: start;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 65px;
   }
   .moon {
     grid-area: moon;
     align-self: start;
-    margin-right: 40px;
+    margin-right: 50px;
     margin-top: 65px;
   }
   .grid-container {
@@ -143,7 +143,7 @@ html, body {
     align-items: center;
     justify-items: center;
     grid-template-areas: "sun      .      .      .      .  moon" ". header header header header  .   " ". one    two    three  four    .   " ". .      footer footer .       .   ";
-    grid-template-rows: 200px 50px 200px 200px;
+    grid-template-rows: 200px 75px 150px 150px;
     grid-template-columns: 50px 75px 75px 75px 75px 50px;
   }
 }
