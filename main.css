@@ -391,7 +391,7 @@ html, body {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 30px;
+  height: 24px;
 }
 
 .box input {
@@ -417,19 +417,19 @@ html, body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
 }
 
 .slider.round {
