@@ -35,10 +35,6 @@ html, body {
   animation-delay: 0.3s;
 }
 
-.cbox {
-  border: 2px solid black;
-}
-
 @keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -391,11 +387,26 @@ html, body {
   animation-name: swing;
 }
 
-input[type="checkbox"] {
-  background-image: -webkit-linear-gradient( 0deg, #4285f4, rgb(181, 102, 255));
-  background-size: 100% 100%, 200% 100%;
+.box {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.box input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
   cursor: pointer;
-  width: 65px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient( 0deg, #4285f4, rgb(181, 102, 255));
+  background-size: 100% 100%, 200% 100%;  -webkit-transition: .4s;
   -webkit-appearance: none;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -403,17 +414,30 @@ input[type="checkbox"] {
   animation-duration: 5s;
 }
 
-input[type="checkbox"]:after {
-  background-color: #fff;
+.slider:before {
+  position: absolute;
   content: "";
-  display: block;
-  height: 16px;
-  width: 46px;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-input[type="checkbox"]:checked {
-  background-position: 0 0, 35px 0;
-  padding-left: 15px;
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 input:focus, select:focus, textarea:focus, button:focus {
