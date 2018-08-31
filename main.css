@@ -46,12 +46,6 @@ html, body {
 
 .central-info {
   text-align: center;
-  background-image: -webkit-linear-gradient(0deg, #4285f4, rgb(181, 102, 255));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: hue 120s infinite linear;
-  animation-duration: 5s;
 }
 
 .sun {
