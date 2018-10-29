@@ -16,45 +16,6 @@
 
         gtag('config', 'UA-121843315-1');
     </script>
-    <script>
-        function flip() {
-            var cbox = document.getElementsByClassName('cbox')[0];
-            console.log(cbox);
-            //myLayer.style.backgroundColor = "#bff0a1";
-            if (cbox.checked === true) {
-                document.body.style.backgroundColor = "black";
-                document.body.style.color = "white";
-                lazyDarkFlip()
-            } else {
-                document.body.style.backgroundColor = "white";
-                document.body.style.color = "black";
-                lazyLightFlip()
-            }
-        }
-
-        function lazyDarkFlip() {
-            console.log(document.getElementById('linkedin'));
-            console.log(document.getElementById('linkedin').src);
-            document.getElementById('linkedin').src = "assets/icons/linkedinLight.svg";
-            document.getElementById('github').src = "assets/icons/githubLight.svg";
-            document.getElementById('resume').src = "assets/icons/documentLight.svg";
-            document.getElementById('email').src = "assets/icons/mailLight.svg";
-            document.getElementsByClassName('moon')[0].classList.add('swing')
-            document.getElementById('smallMoon').classList.remove('swing')
-            document.getElementsByClassName('moon')[0].children[0].classList.add('fadeInDown')
-            document.getElementsByClassName('sun')[0].classList.remove('fadeInUp')
-        }
-        function lazyLightFlip() {
-            document.getElementById('linkedin').src = "assets/icons/linkedin.svg";
-            document.getElementById('github').src = "assets/icons/github.svg";
-            document.getElementById('resume').src = "assets/icons/document.svg";
-            document.getElementById('email').src = "assets/icons/mail.svg";
-            document.getElementsByClassName('moon')[0].classList.remove('swing')
-            document.getElementById('smallMoon').classList.add('swing')
-            document.getElementsByClassName('moon')[0].children[0].classList.remove('fadeInDown')
-            document.getElementsByClassName('sun')[0].classList.add('fadeInUp')
-        }
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
     <link rel="stylesheet" href="main.css" />
