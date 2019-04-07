@@ -1,6 +1,7 @@
 html, body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
+  line-height: 35px;
   color: black;
   background-color: #F6F5F5;
 }
