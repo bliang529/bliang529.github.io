@@ -2,86 +2,172 @@ html, body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
   color: black;
+  background-color: #F6F5F5;
+}
+
+.heading {
+  font-weight: 100;
+}
+
+.nu {
+  color: rgb(078, 042, 132);
 }
 
 .weather-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .sun {
   grid-area: sun;
   justify-self: left;
-  margin-left: 50px;
+  align-self: top;
+}
+
+#blurb {
+  margin-bottom: 15px;
 }
 
 .header {
   grid-area: header;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.info-block {
-  margin-left: 20%;
-  text-align: left;
-  justify-content: left;
-  width: 60%;
+#profile {
+  width: 320px;
+  height: 400px;
+}
+
+.photo{
+  width: 340px;
+  height: 340px;
 }
 
 .info {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  text-align: left;
-  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 15px;
   font-size: 16pt;
 }
 
+.info-block {
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: left;
+  width: 70%;
+}
+
+.info-block-cols {
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+}
+
+.info-block-grid {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adjacent {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.adjacent.left {
+  width: 30%;
+  margin-right: 9%;
+}
+
+.adjacent.right {
+  width: 60%;
+}
+
 h1 {
+  margin: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 40pt;
-  font-weight: 50;
 }
 
 h2 {
   font-size: 30pt;
-
 }
 
 h3 {
   font-size: 20pt;
+  color: #3BB4C1;
+}
 
+h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .grid-container {
   height: 100%;
   display: grid;
-  align-content: top;
-  justify-content: top;
-  align-items: center;
-  justify-items: center;
-  grid-template-areas: "sun . ." ". header .";
-  grid-template-rows: 150px 400px;
-  grid-template-columns: 35% 30% 35%;
+  grid-template-areas: "sun . ." "sun header .";
+  grid-template-rows: 10% 80%;
+  grid-template-columns: 10% 80% 10%;
 }
 
 @media only screen and (max-width: 650px), (max-height: 500px) {
-  .sun {
-    margin-left: 50px;
-    margin-top: 65px;
-  }
-  .moon {
-    grid-area: moon;
-    align-self: start;
-    margin-right: 50px;
-    margin-top: 65px;
-  }
   .grid-container {
-    height: 100%;
-    display: grid;
-    align-content: top;
-    justify-content: top;
-    align-items: center;
-    justify-items: center;
-    grid-template-areas: "sun . ." ". header .";
-    grid-template-rows: 150px 200px;
-    grid-template-columns: 35% 30% 35%;
+    grid-template-areas: "sun . ." "header header header";
+    grid-template-rows: 10% 60%;
+  }
+  
+  #blurb {
+    margin-right: 15px;
+  }
+
+  #profile {
+    width: 160px;
+    height: 200px;
+  }
+
+  .photo{
+    width: 90px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 30pt;
+    font-weight: 50;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 20pt;
+  
+  }
+  
+  h3 {
+    font-size: 10pt;
+  }
+
+  .info {
+    font-size: 12pt;
+  }
+
+  .adjacent.left {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .adjacent.right {
+    width: 100%;
   }
 }
 
@@ -142,15 +228,6 @@ h3 {
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-}
-
-@keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
 }
 
 .sunRotate {
