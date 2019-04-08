@@ -43,9 +43,15 @@ html, body {
   height: 400px;
 }
 
-.photo{
-  width: 340px;
-  height: 340px;
+.photo {
+  width: 300px;
+  height: 300px;
+}
+
+.responsive {
+  width: 32%;
+  max-width: 300px;
+  height: auto;
 }
 
 .info {
@@ -77,6 +83,7 @@ html, body {
 
 .photo-container {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -127,22 +134,17 @@ h2, h3 {
 @media only screen and (max-width: 650px), (max-height: 500px) {
   .grid-container {
     grid-template-areas: "sun . ." "header header header";
-    grid-template-rows: 10% 60%;
+    grid-template-rows: 25% 60%;
     grid-template-columns: 5% 90% 5%;
   }
-  
-  #blurb {
-    margin-right: 15px;
+
+  .header {
+    display: inline-block;
   }
 
   #profile {
     width: 160px;
     height: 200px;
-  }
-
-  .photo{
-    width: 110px;
-    height: 110px;
   }
 
   .info-block, .info-block-cols, .info-block-grid {
