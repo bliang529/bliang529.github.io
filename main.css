@@ -7,6 +7,16 @@ html, body {
   margin: 0;
 }
 
+a { color: #0d5eaf;
+  text-decoration: none; }
+a:visited { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+.tablinks {
+  font-size: 12pt;
+}
+
 .heading {
   font-weight: 100;
   line-height: 50px;
@@ -17,20 +27,28 @@ html, body {
 }
 
 .weather-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .sun {
   grid-area: sun;
   justify-self: left;
   align-self: top;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 #blurb {
   height: 25%;
   margin-bottom: 5%;
   line-height: 30px;
+}
+
+#nav {
+  justify-self: right;
+  align-self: top;
+  grid-area: nav;
 }
 
 .header {
@@ -130,13 +148,12 @@ h2, h3 {
 @media only screen and (max-width: 650px), (max-height: 500px) {
   .grid-container {
     grid-template-areas: "sun . ." "header header header";
-    grid-template-rows: 25% 60%;
+    grid-template-rows: 20% 60%;
     grid-template-columns: 5% 90% 5%;
   }
 
   .weather-icon {
-    width: 36px;
-    height: 36px;
+    display: none;
   }
 
   .header {
@@ -161,7 +178,7 @@ h2, h3 {
   }
   
   h3 {
-    font-size: 10pt;
+    font-size: 16pt;
   }
 
   .info {
@@ -177,12 +194,6 @@ h2, h3 {
     width: 100%;
   }
 }
-
-
-
-
-
-
 
 .animated {
   -webkit-animation-duration: 2s;
