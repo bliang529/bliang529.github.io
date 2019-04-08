@@ -136,6 +136,11 @@ h2, h3 {
     grid-template-columns: 5% 90% 5%;
   }
 
+  .weather-icon {
+    width: 36px;
+    height: 36px;
+  }
+
   .header {
     display: inline-block;
   }
