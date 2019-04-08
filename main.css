@@ -4,6 +4,7 @@ html, body {
   line-height: 35px;
   color: black;
   background-color: #F6F5F5;
+  margin: 0;
 }
 
 .heading {
@@ -27,8 +28,9 @@ html, body {
 }
 
 #blurb {
-  margin-bottom: 15px;
-  line-height: 50px;
+  height: 25%;
+  margin-bottom: 5%;
+  line-height: 30px;
 }
 
 .header {
@@ -40,8 +42,8 @@ html, body {
 }
 
 #profile {
-  width: 320px;
-  height: 400px;
+  height: 70%;
+  width: auto;
 }
 
 .photo {
@@ -50,7 +52,7 @@ html, body {
 }
 
 .responsive {
-  width: 32%;
+  width: calc(100% / 3);
   max-width: 500px;
   height: auto;
 }
@@ -73,10 +75,6 @@ html, body {
   margin-left: 15%;
   margin-right: 15%;
   width: 70%;
-}
-
-.info-block-grid {
-  margin-bottom: 10px;
 }
 
 .photo-container {
@@ -143,11 +141,6 @@ h2, h3 {
 
   .header {
     display: inline-block;
-  }
-
-  #profile {
-    width: 160px;
-    height: 200px;
   }
 
   .info-block, .info-block-cols {
