@@ -57,8 +57,9 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
 }
 
 .responsive {
-  width: 25%;
-  margin: 3%;
+  width: 30%;
+  margin-right: 2%;
+  margin-bottom: 4%;
   max-width: 500px;
   height: auto;
 }
