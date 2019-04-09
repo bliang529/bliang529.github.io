@@ -82,21 +82,6 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   justify-content: space-between;
 }
 
-.adjacent {
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-}
-
-.adjacent.left {
-  width: 30%;
-  margin-right: 9%;
-}
-
-.adjacent.right {
-  width: 60%;
-}
-
 h1 {
   margin: 100px;
   margin-top: 10px;
@@ -164,15 +149,6 @@ h2, h3 {
   
   h3 {
     font-size: 16pt;
-  }
-
-  .adjacent.left {
-    width: 100%;
-    margin-right: 0;
-  }
-  
-  .adjacent.right {
-    width: 100%;
   }
 }
 
