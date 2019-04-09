@@ -1,25 +1,23 @@
 html, body {
-  font-family: "Montserrat", sans-serif;
-  height: 100%;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14pt;
+  font-weight: 100;
   line-height: 35px;
+  height: 100%;
   color: black;
   background-color: #F6F5F5;
   margin: 0;
 }
 
-a { color: #0d5eaf;
-  text-decoration: none; }
-a:visited { text-decoration: none; }
-a:focus { text-decoration: none; }
-a:hover, a:active { text-decoration: none; }
-
-.tablinks {
-  font-size: 12pt;
+a { 
+  color: #0d5eaf;
+  text-decoration: none; 
 }
+a:visited, a:focus, a:hover, a:active { text-decoration: none; }
 
 .heading {
-  font-weight: 100;
   line-height: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nu {
@@ -31,12 +29,20 @@ a:hover, a:active { text-decoration: none; }
   height: 40px;
 }
 
-.sun {
+#sun {
   grid-area: sun;
   justify-self: left;
   align-self: top;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+#header {
+  grid-area: header;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #blurb {
@@ -45,32 +51,14 @@ a:hover, a:active { text-decoration: none; }
   line-height: 30px;
 }
 
-#nav {
-  justify-self: right;
-  align-self: top;
-  grid-area: nav;
-}
-
-.header {
-  grid-area: header;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 #profile {
   height: 70%;
   width: auto;
 }
 
-.photo {
-  width: 500px;
-  height: 500px;
-}
-
 .responsive {
-  width: calc(100% / 3);
+  width: 25%;
+  margin: 3%;
   max-width: 500px;
   height: auto;
 }
@@ -79,24 +67,17 @@ a:hover, a:active { text-decoration: none; }
   margin-top: 20px;
   margin-bottom: 50px;
   margin-left: 15px;
-  font-size: 16pt;
 }
 
 .info-block {
-  margin-left: 15%;
-  margin-right: 15%;
-  justify-content: left;
-  width: 70%;
-}
-
-.info-block-cols {
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
 }
 
 .photo-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -125,11 +106,12 @@ h1 {
 
 h2 {
   font-size: 30pt;
+  color: #72a0c1;
 }
 
 h3 {
   font-size: 20pt;
-  color: #3BB4C1;
+  color: #800020;
 }
 
 h2, h3 {
@@ -156,11 +138,15 @@ h2, h3 {
     display: none;
   }
 
-  .header {
+  .heading {
+    text-align: center;
+  }
+
+  #header {
     display: inline-block;
   }
 
-  .info-block, .info-block-cols {
+  .info-block {
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
@@ -168,7 +154,6 @@ h2, h3 {
 
   h1 {
     font-size: 30pt;
-    font-weight: 50;
     margin: 0;
   }
   
@@ -179,10 +164,6 @@ h2, h3 {
   
   h3 {
     font-size: 16pt;
-  }
-
-  .info {
-    font-size: 12pt;
   }
 
   .adjacent.left {

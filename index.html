@@ -18,16 +18,17 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima_Nova" />
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="animated fadeInUp sun">  
+        <div id="sun" class="animated fadeInUp">  
             <img class="sunRotate weather-icon" src="assets/icons/sun.svg">
         </div>  
-        <div class="animated header fadeIn">
+        <div id="header" class="animated fadeIn">
             <div id="blurb">
                 <h1 class="heading">Me (Brian Liang) </h2>
                 just trying to live life
@@ -70,8 +71,8 @@
                 </p>
             <h3 class="heading">next</h3>
                 <p>
-                I'll be in the bay for six months starting June, doing two software engineering internships.
-                I'll hopefully have a better idea of what I want to do for the long run afterwards. 
+                I'll be a software engineer intern in the bay for six months starting June. <br>
+                Hopefully I have a better idea of what I want to do for the long run afterwards. 
                 <br><br>
                 <strong>If you're in the bay and wanna meetup, hmu!</strong><br>
                 <strong>Feel free to email me at: 
@@ -81,12 +82,16 @@
                 </p>
         </div>
     </div>
-    <div class="info-block-cols">
+    <div class="info-block">
         <div class="adjacent left">
             <h2 class="heading">all things food</h2>
             <div class="info">
                 <h3 class="heading">good eats</h3>
-                    Psistaria Greek Taverna
+                    ~ Psistaria Greek Taverna
+                    <p>
+                    * to be filled in
+                    </p>
+                    ~ Soulwich
                     <p>
                     * to be filled in
                     </p>
@@ -102,7 +107,8 @@
             <h2 class="heading">jetsam / leftovers / etc</h2>
             <div class="info">
                 <h3 class="heading">
-                    random problems in the world that someone should solve
+                    problems someone should solve <br>
+                    (every decent startup starts with a problem!)
                 </h3>
                     1. Communication + Meeting new people is hard <br>
                     2. Language barriers still exist <br>
@@ -116,11 +122,81 @@
         </div>
     </div>
 
-    <div class="info-block-grid">
+    <div class="info-block">
+        <h2 class="heading">photos </h2>
         <div class="photo-container">
-            <img class="photo responsive" src="assets/italy1.jpg" alt="murano italy">
-            <img class="photo responsive" src="assets/greece2.jpg" alt="parthenon in athens">
-            <img class="photo responsive" src="assets/chicago1.jpg" alt="pequod's pizza">
+            <img class="photo responsive" src="assets/1.jpg" alt="pompeii">
+            <img class="photo responsive" src="assets/2.jpg" alt="ponte vecchio">
+            <img class="photo responsive" src="assets/3.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/4.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/5.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/6.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/7.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/8.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/9.jpg" alt="florence sunset">
+            <img class="photo responsive" src="assets/10.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/11.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/12.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/13.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/14.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/15.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/16.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/17.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/18.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/19.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/20.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/21.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/22.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/23.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/24.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/25.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/26.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/27.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/28.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/29.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/30.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/31.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/32.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/33.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/34.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/35.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/36.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/37.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/38.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/39.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/40.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/41.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/42.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/43.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/44.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/45.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/46.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/47.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/48.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/49.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/50.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/51.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/52.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/53.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/54.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/55.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/56.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/57.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/58.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/59.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/60.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/61.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/62.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/63.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/64.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/65.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/66.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/67.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/68.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/69.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/70.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/71.jpg" alt="murano italy">
+            <img class="photo responsive" src="assets/72.jpg" alt="murano italy">
         </div>
     </div>
 </html>
