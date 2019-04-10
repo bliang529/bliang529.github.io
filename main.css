@@ -119,7 +119,7 @@ h2, h3 {
 .grid-container {
   height: 100%;
   display: grid;
-  grid-template-areas: "sun . ." "sun header .";
+  grid-template-areas: "sun . ." ". header .";
   grid-template-rows: 10% 80%;
   grid-template-columns: 10% 80% 10%;
 }
