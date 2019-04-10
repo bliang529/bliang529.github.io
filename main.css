@@ -10,7 +10,7 @@ html, body {
 }
 
 a { 
-  color: #0d5eaf;
+  color: #1b4d3e;
   text-decoration: none; 
 }
 a:visited, a:focus, a:hover, a:active { text-decoration: none; }
@@ -21,6 +21,9 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   font-family: "Montserrat", sans-serif;
 }
 
+.greece {
+  color: #0d5eaf;
+}
 .nu {
   color: rgb(078, 042, 132);
 }
@@ -49,7 +52,7 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
 #blurb {
   height: 25%;
   margin-bottom: 5%;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 #profile {
@@ -68,6 +71,14 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   margin-top: 20px;
   margin-bottom: 50px;
   margin-left: 15px;
+}
+
+p, strong {
+  font-weight: 100;
+}
+
+strong {
+  color: #805910;
 }
 
 .info-block {
