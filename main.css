@@ -17,6 +17,7 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
 
 .heading {
   line-height: 50px;
+  font-weight: 100;
   font-family: "Montserrat", sans-serif;
 }
 
