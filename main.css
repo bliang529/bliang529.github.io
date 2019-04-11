@@ -25,11 +25,6 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   text-align: center;
 }
 
-.left {
-  float: left;
-  margin: 30px;
-}
-
 .greece {
   color: #0d5eaf;
 }
@@ -37,36 +32,31 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   color: rgb(078, 042, 132);
 }
 
-.weather-icon {
-  width: 40px;
-  height: 40px;
-}
-
-#sun {
-  grid-area: sun;
-  justify-self: left;
-  align-self: top;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
 #nav-grid {
   grid-area: nav;
-  justify-self: right;
-  align-self: top;
+  justify-self: center;
 }
 
 #nav {
-  float: right;
+  text-align: center;
 }
 
 #nav-grid, #nav {
   margin: 30px;
+  align-self: center;
+}
+
+#top-left {
+  grid-area: top-left;
+  align-self: center;
+  justify-self: left;
+  margin-left: 10%;
 }
 
 .tab {
+  margin-left: 20px;
+  margin-right: 20px;
   color: black;
-  margin-left: 30px;
 }
 
 .tab.disabled {
@@ -80,12 +70,6 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-#blurb {
-  height: 25%;
-  margin-bottom: 5%;
-  line-height: 35px;
 }
 
 #profile {
@@ -111,7 +95,7 @@ p, strong {
 }
 
 strong {
-  color: #805910;
+  font-weight: 900;
 }
 
 .info-block {
@@ -130,8 +114,6 @@ strong {
 
 h1 {
   margin: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
   font-size: 40pt;
 }
 
@@ -145,7 +127,7 @@ h3 {
   color: #800020;
 }
 
-h2, h3 {
+h1, h2, h3 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -153,20 +135,27 @@ h2, h3 {
 .grid-container {
   height: 100%;
   display: grid;
-  grid-template-areas: "sun nav nav" ". header .";
-  grid-template-rows: 10% 80%;
+  grid-template-areas: ". nav ." ". header ." ". . .";
+  grid-template-rows: 10% 80% 10%;
+  grid-template-columns: 10% 80% 10%;
+}
+
+.grid-header {
+  height: 10%;
+  display: grid;
+  grid-template-areas: "top-left nav .";
+  grid-template-rows: 100%;
   grid-template-columns: 10% 80% 10%;
 }
 
 @media only screen and (max-width: 650px), (max-height: 500px) {
   .grid-container {
-    grid-template-areas: "sun nav nav" "header header header";
-    grid-template-rows: 20% 60%;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: ". nav ." "header header header" ". . .";
   }
 
-  .weather-icon {
-    display: none;
+  #profile {
+    height: 50%;
+    width: auto;
   }
 
   .heading {
@@ -174,7 +163,13 @@ h2, h3 {
   }
 
   #header {
+    margin-top: 50px;
     display: inline-block;
+  }
+
+  .tab {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .info-block {
@@ -184,7 +179,7 @@ h2, h3 {
   }
 
   h1 {
-    font-size: 30pt;
+    font-size: 24pt;
     margin: 0;
   }
   
@@ -203,11 +198,6 @@ h2, h3 {
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes fadeIn {
@@ -249,18 +239,4 @@ h2, h3 {
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-}
-
-.sunRotate {
-  -webkit-animation: rotation 8s infinite linear;
-  animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-      -webkit-transform: rotate(0deg);
-  }
-  to {
-      -webkit-transform: rotate(359deg);
-  }
 }
