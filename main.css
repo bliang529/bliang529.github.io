@@ -21,6 +21,15 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   font-family: "Montserrat", sans-serif;
 }
 
+.center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+  margin: 30px;
+}
+
 .greece {
   color: #0d5eaf;
 }
@@ -39,6 +48,30 @@ a:visited, a:focus, a:hover, a:active { text-decoration: none; }
   align-self: top;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+#nav-grid {
+  grid-area: nav;
+  justify-self: right;
+  align-self: top;
+}
+
+#nav {
+  float: right;
+}
+
+#nav-grid, #nav {
+  margin: 30px;
+}
+
+.tab {
+  color: black;
+  margin-left: 30px;
+}
+
+.tab.disabled {
+  pointer-events: none;
+  color: grey;
 }
 
 #header {
@@ -85,6 +118,7 @@ strong {
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
+  display: inline-block;
 }
 
 .photo-container {
@@ -119,14 +153,14 @@ h2, h3 {
 .grid-container {
   height: 100%;
   display: grid;
-  grid-template-areas: "sun . ." ". header .";
+  grid-template-areas: "sun nav nav" ". header .";
   grid-template-rows: 10% 80%;
   grid-template-columns: 10% 80% 10%;
 }
 
 @media only screen and (max-width: 650px), (max-height: 500px) {
   .grid-container {
-    grid-template-areas: "sun . ." "header header header";
+    grid-template-areas: "sun nav nav" "header header header";
     grid-template-rows: 20% 60%;
     grid-template-columns: 5% 90% 5%;
   }
